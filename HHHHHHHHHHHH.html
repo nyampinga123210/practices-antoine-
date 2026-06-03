@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BE-WISE Innovation Competition</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#f5f7fb;
+padding:20px;
+}
+
+.section{
+background:#fff;
+border-radius:15px;
+padding:20px;
+margin-bottom:30px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.title{
+font-size:22px;
+font-weight:bold;
+margin-bottom:20px;
+color:#0d47a1;
+}
+
+/* NAVBAR */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+border-bottom:1px solid #eee;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#0d47a1;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+.btn{
+background:#0057d8;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* HERO */
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:30px;
+padding:40px;
+}
+
+.hero-text h1{
+font-size:50px;
+color:#0d47a1;
+margin-bottom:15px;
+}
+
+.hero-text p{
+line-height:1.8;
+margin-bottom:20px;
+}
+
+.hero img{
+width:100%;
+}
+
+/* FEATURES */
+.features{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+padding:20px;
+}
+
+.feature{
+background:#f7f9ff;
+padding:20px;
+border-radius:10px;
+text-align:center;
+}
+
+.feature i{
+font-size:35px;
+color:#0057d8;
+margin-bottom:10px;
+}
+
+/* LOGIN */
+.auth{
+display:grid;
+grid-template-columns:300px 1fr;
+gap:30px;
+}
+
+.auth-left{
+background:linear-gradient(135deg,#0057d8,#0d47a1);
+color:white;
+padding:40px;
+border-radius:15px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.forms{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+border:1px solid #ddd;
+}
+
+.input{
+width:100%;
+padding:12px;
+margin-top:8px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+/* DASHBOARD */
+.dashboard{
+display:grid;
+grid-template-columns:250px 1fr;
+}
+
+.sidebar{
+background:#003d99;
+color:white;
+padding:20px;
+border-radius:10px;
+min-height:500px;
+}
+
+.sidebar h3{
+margin-bottom:20px;
+}
+
+.sidebar ul{
+list-style:none;
+}
+
+.sidebar li{
+padding:12px;
+margin-bottom:10px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.sidebar li:hover{
+background:#0057d8;
+}
+
+.content{
+padding:20px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin:20px 0;
+}
+
+.stat{
+padding:20px;
+border-radius:10px;
+background:#f5f7fb;
+}
+
+.stat h2{
+color:#0057d8;
+}
+
+/* TABLE */
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+table th,
+table td{
+border:1px solid #ddd;
+padding:12px;
+text-align:left;
+}
+
+th{
+background:#0057d8;
+color:white;
+}
+
+/* FORM PAGE */
+.form-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+textarea{
+height:120px;
+}
+
+.upload{
+border:2px dashed #aaa;
+padding:40px;
+text-align:center;
+border-radius:10px;
+}
+
+/* STATUS */
+.status{
+display:flex;
+justify-content:center;
+align-items:center;
+height:350px;
+}
+
+.status-box{
+text-align:center;
+padding:40px;
+background:white;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.status-box i{
+font-size:80px;
+color:green;
+margin-bottom:15px;
+}
+
+@media(max-width:900px){
+
+.hero,
+.auth,
+.dashboard,
+.form-grid,
+.forms{
+grid-template-columns:1fr;
+}
+
+.cards{
+grid-template-columns:1fr 1fr;
+}
+
+.features{
+grid-template-columns:1fr;
+}
+}
+/* PROFILE PAGE */
+.profile-page{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    margin-top:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.profile-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.profile-header h2{
+    color:#003d99;
+}
+
+.profile-header button{
+    background:#0057d8;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.profile-card{
+    display:flex;
+    gap:25px;
+    align-items:center;
+    background:#f7f9ff;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:25px;
+}
+
+.profile-image img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #0057d8;
+}
+
+.profile-info h3{
+    color:#003d99;
+    margin-bottom:10px;
+}
+
+.profile-info p{
+    margin-bottom:8px;
+}
+
+.profile-details{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.detail-card{
+    background:#f5f7fb;
+    padding:20px;
+    text-align:center;
+    border-radius:10px;
+}
+
+.detail-card h4{
+    margin-bottom:10px;
+}
+
+.detail-card span{
+    font-size:28px;
+    color:#0057d8;
+    font-weight:bold;
+}
+
+.account-settings{
+    background:#f7f9ff;
+    padding:20px;
+    border-radius:12px;
+}
+
+.account-settings h3{
+    margin-bottom:20px;
+    color:#003d99;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:5px;
+    font-weight:600;
+}
+
+.form-group input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+.save-btn{
+    background:#0057d8;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+    .profile-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .profile-details{
+        grid-template-columns:1fr;
+    }
+}
+.page-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.page-header h2{
+    color:#003d99;
+}
+
+.add-user-btn{
+    background:#0057d8;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.search-box{
+    margin-bottom:20px;
+}
+
+.search-box input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+.users-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.users-table th{
+    background:#0057d8;
+    color:white;
+    padding:12px;
+}
+
+.users-table td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+}
+
+.avatar{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.active{
+    background:#d4edda;
+    color:#155724;
+    padding:5px 10px;
+    border-radius:20px;
+}
+
+.inactive{
+    background:#f8d7da;
+    color:#721c24;
+    padding:5px 10px;
+    border-radius:20px;
+}
+
+.view-btn,
+.edit-btn,
+.delete-btn{
+    border:none;
+    padding:8px 12px;
+    border-radius:5px;
+    cursor:pointer;
+    margin-right:5px;
+}
+
+.view-btn{
+    background:#17a2b8;
+    color:white;
+}
+
+.edit-btn{
+    background:#28a745;
+    color:white;
+}
+
+.delete-btn{
+    background:#dc3545;
+    color:white;
+}
+.messages-container{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:20px;
+}
+
+/* LEFT SIDE */
+.message-list{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.message-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:15px;
+    cursor:pointer;
+    border-bottom:1px solid #eee;
+}
+
+.message-item:hover{
+    background:#f5f7fb;
+}
+
+.message-item.active{
+    background:#eef4ff;
+}
+
+.message-item img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+}
+
+.message-item h4{
+    margin-bottom:5px;
+}
+
+.message-item p{
+    color:#777;
+    font-size:14px;
+}
+
+/* CHAT BOX */
+.chat-box{
+    background:white;
+    border-radius:10px;
+    display:flex;
+    flex-direction:column;
+    height:600px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.chat-header{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:20px;
+    border-bottom:1px solid #eee;
+}
+
+.chat-header img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+}
+
+.chat-header span{
+    color:green;
+    font-size:14px;
+}
+
+.chat-body{
+    flex:1;
+    padding:20px;
+    overflow-y:auto;
+    background:#f5f7fb;
+}
+
+.message{
+    max-width:70%;
+    padding:12px 16px;
+    border-radius:15px;
+    margin-bottom:15px;
+}
+
+.received{
+    background:white;
+    border:1px solid #ddd;
+}
+
+.sent{
+    background:#0057d8;
+    color:white;
+    margin-left:auto;
+}
+
+.chat-footer{
+    display:flex;
+    gap:10px;
+    padding:15px;
+    border-top:1px solid #eee;
+}
+
+.chat-footer input{
+    flex:1;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+.chat-footer button{
+    width:50px;
+    border:none;
+    background:#0057d8;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+.messages-container{
+    grid-template-columns:1fr;
+}
+
+.chat-box{
+    height:500px;
+}
+
+}
+</style>
+</head>
+<body>
+
+<!-- LANDING PAGE -->
+<div class="section">
+<div class="title">1. LANDING PAGE</div>
+
+<div class="navbar">
+<div class="logo">BE-WISE</div>
+
+<div class="nav-links">
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">How it Works</a>
+<a href="#">Timeline</a>
+<a href="#">Contact</a>
+</div>
+
+<button class="btn">Login / Register</button>
+</div>
+
+<div class="hero">
+<div class="hero-text">
+<h1>Innovation Competition</h1>
+<p>
+We promote education in Rwanda especially in TVET schools by
+organizing innovation competitions for students.
+</p>
+
+<button class="btn">Apply Now</button>
+</div>
+
+<div>
+<img src="https://illustrations.popsy.co/blue/team-work.svg">
+</div>
+</div>
+
+<div class="features">
+<div class="feature">
+<i class="fas fa-user-graduate"></i>
+<h3>For TVET Students</h3>
+<p>Apply and showcase your ideas.</p>
+</div>
+
+<div class="feature">
+<i class="fas fa-file-upload"></i>
+<h3>Submit Project</h3>
+<p>Upload innovative solutions.</p>
+</div>
+
+<div class="feature">
+<i class="fas fa-trophy"></i>
+<h3>Get Recognized</h3>
+<p>Win awards and prizes.</p>
+</div>
+</div>
+</div>
+
+<!-- LOGIN REGISTER -->
+<div class="section">
+<div class="title">2. LOGIN / REGISTER PAGE</div>
+
+<div class="auth">
+
+<div class="auth-left">
+<div>
+<h1>Welcome Back!</h1>
+<p>Login to continue your application.</p>
+</div>
+</div>
+
+<div class="forms">
+
+<div class="card">
+<h2>Login</h2>
+<input class="input" placeholder="Email">
+<input class="input" placeholder="Password" type="password">
+<button class="btn" style="width:100%">Login</button>
+</div>
+
+<div class="card">
+<h2>Register</h2>
+<input class="input" placeholder="Full Name">
+<input class="input" placeholder="Email">
+<input class="input" placeholder="Password">
+<input class="input" placeholder="Confirm Password">
+<button class="btn" style="width:100%">Register</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- STUDENT DASHBOARD -->
+<div class="section">
+<div class="title">3. STUDENT DASHBOARD</div>
+
+<div class="dashboard">
+
+<div class="sidebar">
+<h3>BE-WISE</h3>
+
+<ul>
+<li>Dashboard</li>
+<li>My Applications</li>
+<li>Messages</li>
+<li>Profile</li>
+<li>Logout</li>
+</ul>
+</div>
+
+<div class="content">
+
+<h2>Welcome, Jean Paul!</h2>
+
+<div class="cards">
+
+<div class="stat">
+<h2>1</h2>
+<p>Submitted</p>
+</div>
+
+<div class="stat">
+<h2>0</h2>
+<p>Pending</p>
+</div>
+
+<div class="stat">
+<h2>0</h2>
+<p>Approved</p>
+</div>
+
+<div class="stat">
+<h2>0</h2>
+<p>Rejected</p>
+</div>
+
+</div>
+
+<table>
+<tr>
+<th>Project Title</th>
+<th>Date</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>Smart Irrigation System</td>
+<td>25 May 2024</td>
+<td>Pending</td>
+</tr>
+</table>
+
+</div>
+</div>
+</div>
+
+<!-- APPLICATION FORM -->
+<div class="section">
+<div class="title">4. APPLICATION FORM PAGE</div>
+
+<div class="dashboard">
+
+<div class="sidebar">
+<h3>BE-WISE</h3>
+<ul>
+<li>Dashboard</li>
+<li>Applications</li>
+<li>Messages</li>
+<li>Profile</li>
+</ul>
+</div>
+
+<div class="content">
+
+<h2>New Application</h2>
+
+<div class="form-grid">
+
+<div>
+<input class="input" placeholder="Project Title">
+<input class="input" placeholder="School">
+<input class="input" placeholder="Project Category">
+
+<textarea class="input"
+placeholder="Project Description"></textarea>
+</div>
+
+<div>
+<input class="input" placeholder="Team Members">
+<input class="input" placeholder="Phone Number">
+
+<div class="upload">
+<i class="fas fa-cloud-upload-alt fa-3x"></i>
+<p>Upload Proposal</p>
+</div>
+</div>
+
+</div>
+
+<br>
+<button class="btn">Submit Application</button>
+
+</div>
+</div>
+</div>
+
+<!-- ADMIN DASHBOARD -->
+<div class="section">
+<div class="title">5. ADMIN DASHBOARD</div>
+
+<div class="dashboard">
+
+<div class="sidebar">
+<h3>Admin Panel</h3>
+<ul>
+<li>Dashboard</li>
+<li>Applications</li>
+<li>Users</li>
+<li>Reports</li>
+<li>Settings</li>
+</ul>
+</div>
+
+<div class="content">
+
+<h2>All Applications</h2>
+
+<table>
+<tr>
+<th>ID</th>
+<th>Project</th>
+<th>Student</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Smart Irrigation</td>
+<td>Jean Paul</td>
+<td>Pending</td>
+<td>
+<button class="btn">Approve</button>
+</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Solar Charger</td>
+<td>Aline</td>
+<td>Pending</td>
+<td>
+<button class="btn">Approve</button>
+</td>
+</tr>
+
+</table>
+
+</div>
+</div>
+</div>
+
+<!-- STATUS PAGE -->
+<div class="section">
+<div class="title">6. APPLICATION STATUS PAGE</div>
+
+<div class="dashboard">
+
+<div class="sidebar">
+<h3>BE-WISE</h3>
+
+<ul>
+<li>Dashboard</li>
+<li>Applications</li>
+<li>Messages</li>
+<li>Profile</li>
+</ul>
+</div>
+
+<div class="content">
+
+<div class="status">
+<div class="status-box">
+
+<i class="fas fa-check-circle"></i>
+
+<h1>Congratulations!</h1>
+
+<p>Your application has been approved.</p>
+
+<br>
+
+<button class="btn">
+Back To Dashboard
+</button>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<section class="profile-page">
+
+    <div class="profile-header">
+        <h2>My Profile</h2>
+        <button>Edit Profile</button>
+    </div>
+
+    <div class="profile-card">
+
+        <div class="profile-image">
+            <img src="https://via.placeholder.com/150" alt="Student">
+        </div>
+
+        <div class="profile-info">
+            <h3>Jean Paul</h3>
+            <p><strong>Student ID:</strong> TVET2026001</p>
+            <p><strong>Email:</strong> jeanpaul@gmail.com</p>
+            <p><strong>Phone:</strong> +250 788 123 456</p>
+            <p><strong>School:</strong> Kigali TVET School</p>
+            <p><strong>Department:</strong> Software Development</p>
+            <p><strong>District:</strong> Gasabo</p>
+        </div>
+
+    </div>
+
+    <div class="profile-details">
+
+        <div class="detail-card">
+            <h4>Applications Submitted</h4>
+            <span>3</span>
+        </div>
+
+        <div class="detail-card">
+            <h4>Approved Projects</h4>
+            <span>1</span>
+        </div>
+
+        <div class="detail-card">
+            <h4>Pending Reviews</h4>
+            <span>2</span>
+        </div>
+
+    </div>
+
+    <div class="account-settings">
+
+        <h3>Account Settings</h3>
+
+        <form>
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" value="Jean Paul">
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" value="jeanpaul@gmail.com">
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="text" value="+250788123456">
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" placeholder="********">
+            </div>
+
+            <button type="submit" class="save-btn">
+                Save Changes
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+<div class="content">
+
+    <div class="page-header">
+        <h2>User Management</h2>
+
+        <button class="add-user-btn">
+            <i class="fas fa-plus"></i> Add User
+        </button>
+    </div>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search users...">
+    </div>
+
+    <table class="users-table">
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Photo</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>001</td>
+                <td>
+                    <img src="https://i.pravatar.cc/40?img=1" class="avatar">
+                </td>
+                <td>Jean Paul</td>
+                <td>jean@gmail.com</td>
+                <td>Student</td>
+                <td><span class="active">Active</span></td>
+                <td>
+                    <button class="view-btn">View</button>
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>002</td>
+                <td>
+                    <img src="https://i.pravatar.cc/40?img=5" class="avatar">
+                </td>
+                <td>Aline Uwimana</td>
+                <td>aline@gmail.com</td>
+                <td>Student</td>
+                <td><span class="active">Active</span></td>
+                <td>
+                    <button class="view-btn">View</button>
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>003</td>
+                <td>
+                    <img src="https://i.pravatar.cc/40?img=10" class="avatar">
+                </td>
+                <td>Admin User</td>
+                <td>admin@gmail.com</td>
+                <td>Admin</td>
+                <td><span class="inactive">Inactive</span></td>
+                <td>
+                    <button class="view-btn">View</button>
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+<div class="content">
+
+    <div class="page-header">
+        <h2>Messages</h2>
+    </div>
+
+    <div class="messages-container">
+
+        <!-- Message List -->
+        <div class="message-list">
+
+            <div class="message-item active">
+                <img src="https://i.pravatar.cc/50?img=1">
+                <div>
+                    <h4>Jean Paul</h4>
+                    <p>Hello Admin, I need help...</p>
+                </div>
+            </div>
+
+            <div class="message-item">
+                <img src="https://i.pravatar.cc/50?img=5">
+                <div>
+                    <h4>Aline Uwimana</h4>
+                    <p>My project status is pending...</p>
+                </div>
+            </div>
+
+            <div class="message-item">
+                <img src="https://i.pravatar.cc/50?img=8">
+                <div>
+                    <h4>Claude Niyonzaba</h4>
+                    <p>Please review my application.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Chat Box -->
+        <div class="chat-box">
+
+            <div class="chat-header">
+                <img src="https://i.pravatar.cc/50?img=1">
+                <div>
+                    <h3>Jean Paul</h3>
+                    <span>Online</span>
+                </div>
+            </div>
+
+            <div class="chat-body">
+
+                <div class="message received">
+                    Hello Admin, I uploaded my proposal.
+                </div>
+
+                <div class="message sent">
+                    Thank you. We are reviewing it.
+                </div>
+
+                <div class="message received">
+                    When will the results be available?
+                </div>
+
+                <div class="message sent">
+                    Results will be announced next week.
+                </div>
+
+            </div>
+
+            <div class="chat-footer">
+                <input type="text" placeholder="Type your message...">
+                <button>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
